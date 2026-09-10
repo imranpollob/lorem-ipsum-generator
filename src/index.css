@@ -166,18 +166,12 @@ body {
   color: var(--color-text);
 }
 
-.brand-logo-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: var(--radius);
-  background: var(--color-primary);
-  display: grid;
-  place-items: center;
-  color: #ffffff;
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-sm);
-  letter-spacing: var(--letter-spacing-wide);
-  box-shadow: 0 2px 8px rgba(13, 148, 136, 0.35);
+.brand-logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 2px 6px rgba(13, 148, 136, 0.25));
 }
 
 .brand-info {

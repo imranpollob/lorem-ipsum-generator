@@ -105,7 +105,11 @@ export default function App() {
       <header className="site-header">
         <div className="container header-content">
           <a href="./" className="brand-link" aria-label="Imran Pollob Home">
-            <div className="brand-logo-mark">IP</div>
+            <img
+              src={`${import.meta.env.BASE_URL}logo.png`}
+              alt="Imran Pollob Logo"
+              className="brand-logo-img"
+            />
             <div className="brand-info">
               <span className="brand-title">Lorem Ipsum Generator</span>
             </div>
