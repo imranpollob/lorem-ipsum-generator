@@ -34,6 +34,17 @@ export default function App() {
     localStorage.setItem("ip-theme", theme);
   }, [theme]);
 
+  // If the brand launcher mounted its floating fallback before React
+  // committed the header slot, move the toggle into the slot.
+  useEffect(() => {
+    const slot = document.querySelector("[data-brand-launcher]");
+    const floating = document.querySelector(".bl-toggle.bl-floating");
+    if (slot && floating) {
+      floating.classList.remove("bl-floating");
+      slot.replaceWith(floating);
+    }
+  }, []);
+
   const toggleTheme = () => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
@@ -154,6 +165,7 @@ export default function App() {
               </svg>
               <span>GitHub</span>
             </a>
+            <span data-brand-launcher></span>
           </div>
         </div>
       </header>
